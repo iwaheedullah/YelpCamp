@@ -1,0 +1,11 @@
+<% layout('./layouts/boilerplate') -%>
+
+    <h1> Index Campgrounds </h1>
+
+    <a href="/campgrounds/new"> Add a new Campground </a>
+        
+    <ul>
+        <% for (let campground of campgrounds) { %>
+        <li><a href="/campgrounds/<%=campground._id%>"> <%=campground.title%> </a></li>
+        <% } %>
+    </ul>
