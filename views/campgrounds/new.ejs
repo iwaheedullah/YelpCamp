@@ -3,15 +3,31 @@
     <div class="col-6 offset-3">
         <h1> New Campground </h1>
 
-        <form class="" method="POST" action="/campgrounds">
+        <form class="needs-validation" method="POST" action="/campgrounds" novalidate>
+
             <div class="mb-3">
               <label for="title" class="form-label">Title</label>
-              <input type="text" class="form-control" id="title" name="campground[title]">
+              <input type="text" class="form-control" id="title" name="campground[title]" required>
+              <div class="invalid-feedback">
+                Please provide a title.
+              </div>
             </div>
-              
+
+            <div class="mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input type="number" class="form-control" id="price" name="campground[price]" required>
+              <div class="invalid-feedback">
+                Please provide the price.
+              </div>
+            </div>
+
+
             <div class="mb-3">
               <label for="location" class="form-label">Location</label>
-              <input type="text" class="form-control" id="location" name="campground[location]">
+              <input type="text" class="form-control" id="location" name="campground[location]" required>
+              <div class="invalid-feedback">
+                Please provide the location for campground.
+              </div>
             </div>
 
             <button type="submit" class="btn btn-primary">Register a campground </button>
