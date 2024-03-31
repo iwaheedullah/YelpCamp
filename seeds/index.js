@@ -28,7 +28,8 @@ const insertData = async function(cities, places, descriptors) {
     
         const newCampground = new campgroundModel({
             title: `${arrayElement(descriptors)} ${arrayElement(places)}`,
-            location: `${cities[citiesIndex].city} ${cities[citiesIndex].state}`
+            location: `${cities[citiesIndex].city} ${cities[citiesIndex].state}`,
+            price: `${Math.floor(Math.random() * 5) + 1}`,
         });
 
         await newCampground.save();
